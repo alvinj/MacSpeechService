@@ -8,12 +8,21 @@ with the Play Framework and Scala.
 Usage
 -----
 
-The _postData.sh_ script shows how to call this web service.
+Start the Play server from the project's root directory by first
+running the `play` command:
+
+    $ play
+
+Then start the service on port 8080:
+
+    play> run 8080
+
+Once it's running, the _postData.sh_ script shows how to call this web service.
 That script looks like this:
 
     curl \
     --request POST \
-    --data "text=hello%20world&voice=Samantha" \
+    --data "text=hello%2C%20world&voice=Samantha" \
     http://localhost:8080/speak
 
 
