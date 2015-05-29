@@ -25,7 +25,7 @@ object SpeechService extends Controller {
         form.bindFromRequest.fold(
             errors => {
                 // the form did not bind to the post data
-                Ok("That didn't work")
+                BadRequest("That didn't work")
             },
             postData => {
                 // the form data bound, process it
